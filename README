@@ -1,0 +1,17 @@
+Author: Trung Ly
+
+Mint.com is a personal finance website that sends out an email of your financial summary every Friday.  Included in that email is a "Net Worth" number.  If you do a good job of inputting all your data into Mint, this is a fairly accurate gauge of your net worth.
+
+I wanted to automatically generate a nice graph of my net worth, so that's what this script does.  This is not a webapp, just a ruby script.
+
+This script is really only meant for me, but if for some strange reason you want to try it, this is what you'll need:
+1) Have Mint send the statements to a Gmail account
+2) Set up a filter to label all those emails as "MintStatements"
+3) Ruby (duh!) with scruffy and builder gems installed
+
+Usage: ruby graph_networth.sh <your_gmail_username> <your_gmail_password>
+
+Output: mynetworth.svg
+
+Known issues: There was some error with scruffy and builder on Ruby 1.9.1.  1.8.7 works fine.
+
